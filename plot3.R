@@ -30,6 +30,7 @@ plot3 <- function() {
 ##	Sub_metering_2 and ... _3 as separate lines with colors red and blue.
 ##	finally adding the legend.
 ##
+	png(file="plot3.png")
 	plot(power_con_sel$Sub_metering_1, 
 		type = 'l', xaxt = "n",
 		ylab = "Energy sub metering", xlab = "")
@@ -45,7 +46,7 @@ plot3 <- function() {
 ##
 ##	copy to png file with given width and height (is by chance default)
 ##
-	dev.copy(png,"plot3.png", width=480, height=480)
+##	dev.copy(png,"plot3.png", width=480, height=480)
 	dev.off()
 ##	
 }
